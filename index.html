@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneEarthHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(245, 247, 245);
+      font-family: sans-serif;
+    }
+
+    .home {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 0.5rem 1rem;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    #logo {
+      height: 4rem;
+      width: 4.5rem;
+      margin-right: 1rem;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    .new {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .is {
+      text-decoration: none;
+      color: green;
+      font-size: 1.2rem;
+    }
+
+    .new3 {
+      display: flex;
+      gap: 1rem;
+      margin-left: auto;
+    }
+
+    .text {
+      font-size: 3rem;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      top: 40%;
+      color: black;
+      font-family: "Poetsen One", sans-serif;
+      padding: 0 1rem;
+    }
+
+    #quote {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .message {
+      padding: 8rem 1rem 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: rgb(42, 83, 42);
+    }
+
+    .point {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      background: url('th.jpeg') center/cover no-repeat;
+      flex-wrap: wrap;
+      padding: 2rem;
+    }
+
+    .points {
+      background: #f5faf5;
+      padding: 1rem;
+      width: 8rem;
+      text-align: center;
+    }
+
+    .feed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .person {
+      border: 1px solid black;
+      padding: 1rem;
+      width: 90%;
+      max-width: 300px;
+      background-color: #fff;
+    }
+
+    .p1 {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .icons {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .icon {
+      width: 20px;
+    }
+
+    .login {
+      background-color: rgb(15, 133, 15);
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      font-size: 1.2rem;
+    }
+
+    #join {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      border: none;
+      background-color: white;
+      color: green;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #f0f0f0;
+      padding: 2rem;
+    }
+
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .columns {
+      min-width: 150px;
+      text-align: left;
+    }
+
+    .end {
+      text-align: center;
+      padding-top: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .new3 {
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .text {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="home">
+      <video autoplay muted loop playsinline class="video" src="vecteezy_ai-generated-earth-globe-illustration-animation-horizontal_42643019.mov"></video>
+
+      <div class="navbar">
+        <img src="mother-earth-day.png" id="logo"> OneEarthHub
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="new nav-links">
+          <a href="#" class="is">Home</a>
+          <a href="#login" class="is">Login</a>
+          <a href="#EcoTips" class="is">Events</a>
+          <a href="event.html" class="is">EcoTips</a>
+          <a href="#contact" class="is">Contact</a>
+        </div>
+
+        <div class="new3">
+          <i class="fa-solid fa-bell"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+
+      <div class="text">
+        <p id="connect">Connect with eco-conscious Individuals</p>
+        <p id="quote">
+          <i>Join our green community and share eco-friendly tips, events, and projects to make a positive impact on our planet.</i>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="message">
+      <h1 id="heading1">Our Growing Impact</h1>
+      GreenConnect brings together eco-conscious individuals from around the world to create meaningful change through collaboration and knowledge sharing.
+    </section>
+
+    <section class="point">
+      <div class="points">
+        <!-- <img src="leaf.png" class="ic"><br>--><b>Eco Points<br>2,450</b> 
+      </div>
+      <div class="points">
+        <!-- <img src="calendar-check.png" class="ic"><br>--><b>Events Joined<br>12</b> 
+      </div>
+      <div class="points">
+        <!-- <img src="group.png" class="ic"><br>--><b>Community Impact<br>High</b> 
+      </div>
+    </section>
+
+    <section id="EcoTips">
+      <h1 style="text-align: center;">EVENTS</h1>
+      <div class="feed">
+        <div class="person">
+          <div class="p1">
+            <i class="fa-solid fa-user"></i>&nbsp;Anaya Iyer
+          </div>
+          <p>
+            Created a DIY compost bin using old wooden pallets!<br>It's amazing how much kitchen waste we can turn into rich soil.
+          </p>
+          <img src="compost_pit.jpg" style="width:100%; height:auto;">
+          <div class="icons">
+            <img src="heart.png" class="icon">200
+            <img src="comment.png" class="icon">18
+            <img src="share.png" class="icon">share
+          </div>
+        </div>
+        <div class="person">
+          <div class="p1">
+            <i class="fa-solid fa-user"></i>&nbsp;Kunal Verma
+          </div>
+          <p>
+            Organized a successful beach cleanup today! Together we collected over 50 bags of trash.
+          </p>
+          <img src="beach.jpg" style="width:100%; height:auto;">
+          <div class="icons">
+            <img src="heart.png" class="icon">122
+            <img src="comment.png" class="icon">12
+            <img src="share.png" class="icon">share
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="login" id="login">
+      <img src="leaf.png" style="height:3rem;"><br>
+      <p style="font-size:2rem;">Ready to make a difference?</p>
+      <p>Join our community today and be a part of OneEarth Hub.</p>
+      <button id="join" onclick="goToPage()">Get Started</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="column" id="contact">
+      <div class="columns">
+        <b>ABOUT</b><br>Our Mission<br>Community Guidelines<br>Contact Us
+      </div>
+      <div class="columns">
+        <b>RESOURCES</b><br>Eco Tips<br>Environmental News<br>Learning Center
+      </div>
+      <div class="columns">
+        <b>CONNECT</b><br>Facebook<br>Instagram
+      </div>
+      <div class="columns">
+        <b>NEWSLETTER</b><br>Get the updates and News<br>
+        <input type="text" placeholder="Enter your Email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="end">
+      <hr><br>
+      &copy; 2025 OneEarth Hub, all rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
+    }
+
+    function goToPage() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
